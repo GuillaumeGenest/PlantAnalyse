@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0693B79329D33D0E0072EADE /* analyse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693B79229D33D0E0072EADE /* analyse.swift */; };
 		0696903129D3285D00F3F3FC /* PlantAnalyseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696903029D3285D00F3F3FC /* PlantAnalyseApp.swift */; };
 		0696903329D3285D00F3F3FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696903229D3285D00F3F3FC /* ContentView.swift */; };
 		0696903529D3286200F3F3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0696903429D3286200F3F3FC /* Assets.xcassets */; };
 		0696903929D3286200F3F3FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0696903829D3286200F3F3FC /* Preview Assets.xcassets */; };
+		0696904029D32BEA00F3F3FC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0696903F29D32BEA00F3F3FC /* PhotoPicker.swift */; };
+		06A1265529DC699B00D84340 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1265429DC699B00D84340 /* Classifier.swift */; };
+		06A1265929DC6DF700D84340 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 06A1265829DC6DF700D84340 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0693B79229D33D0E0072EADE /* analyse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = analyse.swift; sourceTree = "<group>"; };
 		0696902D29D3285D00F3F3FC /* PlantAnalyse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantAnalyse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0696903029D3285D00F3F3FC /* PlantAnalyseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAnalyseApp.swift; sourceTree = "<group>"; };
 		0696903229D3285D00F3F3FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0696903429D3286200F3F3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0696903629D3286200F3F3FC /* PlantAnalyse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantAnalyse.entitlements; sourceTree = "<group>"; };
 		0696903829D3286200F3F3FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0696903F29D32BEA00F3F3FC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		06A1265429DC699B00D84340 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		06A1265829DC6DF700D84340 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				0696903029D3285D00F3F3FC /* PlantAnalyseApp.swift */,
+				0696903F29D32BEA00F3F3FC /* PhotoPicker.swift */,
 				0696903229D3285D00F3F3FC /* ContentView.swift */,
+				06A1265829DC6DF700D84340 /* MobileNetV2.mlmodel */,
 				0696903429D3286200F3F3FC /* Assets.xcassets */,
 				0696903629D3286200F3F3FC /* PlantAnalyse.entitlements */,
 				0696903729D3286200F3F3FC /* Preview Content */,
+				0693B79229D33D0E0072EADE /* analyse.swift */,
+				06A1265429DC699B00D84340 /* Classifier.swift */,
 			);
 			path = PlantAnalyse;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A1265929DC6DF700D84340 /* MobileNetV2.mlmodel in Sources */,
+				06A1265529DC699B00D84340 /* Classifier.swift in Sources */,
 				0696903329D3285D00F3F3FC /* ContentView.swift in Sources */,
+				0693B79329D33D0E0072EADE /* analyse.swift in Sources */,
 				0696903129D3285D00F3F3FC /* PlantAnalyseApp.swift in Sources */,
+				0696904029D32BEA00F3F3FC /* PhotoPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +303,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Guillaume-Genest.PlantAnalyse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,7 +343,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Guillaume-Genest.PlantAnalyse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
